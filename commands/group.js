@@ -7,8 +7,9 @@ const data = new SlashCommandBuilder()
         .setName('group_number') // must be underscore format
         .setDescription('The group you request to be assigned to.')
         .setMinValue(1)
-        .setMaxValue(23)
-        .setRequired(true));
+        .setMaxValue(30)
+        .setRequired(true))
+	.setDefaultMemberPermissions(0); // admin only by default
 
 const execute = async (interaction) => {
     await interaction.deferReply();
